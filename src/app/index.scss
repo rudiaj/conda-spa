@@ -124,13 +124,20 @@
  			background-color: white;
  			box-shadow: -0.7px 0.7px 6.7px 0.4px rgba(146, 146, 146, 0.15);		
  		}
+ 		.display-flex{
+ 			display: flex;
+ 		}
  		.percentage-wrapper{
+ 			flex: 1;
+ 			position: relative;
  			.percentage-text{
  				display: inline-block;
  				margin-bottom: 34px;
  				font-size: 16px;
  			}
  			.circle{
+ 				position: relative;
+ 				z-index: 1;
  				height: 38px;
  				width: 38px;
  				border-radius: 50%;
@@ -141,6 +148,22 @@
  					font-size: 24px;
 
  				}
+ 			}
+ 			.percentage-line{
+ 				z-index: 0;
+ 				position: absolute;
+ 				height: 3px;
+ 				background-color: $conda-secondary-color;
+ 				width: calc(49% - 18px);
+ 				bottom: 17px;
+ 			}
+ 			.first-percentage-line{
+ 				@extend .percentage-line;
+ 				left: calc(50% + 18px);
+ 			}
+ 			.second-percentage-line{
+ 				@extend .percentage-line;
+ 				left: 100%;
  			}
  		}
  		.card-padding{

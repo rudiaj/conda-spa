@@ -7,8 +7,8 @@
 
   /** @ngInject */
   function MainController($timeout, webDevTec, toastr, $scope) {
-    var vm = this;
-    $scope.nesto ="kkeke";
+    var vm = this;;
+    vm.nesto ="fjkfjtg";
 
   
   }
