@@ -149,21 +149,32 @@
 
  				}
  			}
+ 			.first-percentage-line-inner-wrapper{
+ 				position: relative;
+ 				.arrow{
+ 					height: 20px;
+ 					width: auto;
+ 					position: absolute;
+ 					left: calc(100% - 10px);
+ 					bottom: -12px;
+
+ 				}
+ 			}
  			.percentage-line{
  				z-index: 0;
  				position: absolute;
- 				height: 3px;
+ 				height: 4px;
  				background-color: $conda-secondary-color;
- 				width: calc(49% - 18px);
+ 				width: calc(48% - 18px);
  				bottom: 17px;
  			}
  			.first-percentage-line{
  				@extend .percentage-line;
- 				left: calc(50% + 18px);
+ 				right:3px;
  			}
  			.second-percentage-line{
  				@extend .percentage-line;
- 				left: 100%;
+ 				left: calc(100% + 6px);
  			}
  		}
  		.card-padding{

@@ -1,3 +1,4 @@
+{{asset}}
 <div id=main>
   <nav class="navbar navbar-default navbar-static-top">
     <div class="container">
@@ -46,22 +47,29 @@
             </h1>
           </div>
           <div class="col-xs-12 display-flex">
-
             <div class="flex-container flex-flow-column percentage-wrapper">
               <span class="percentage-text green-text text-center">Investment amount</span>
               <div class="flex-container circle">
                 <span class="bold-text">1</span>
-                
               </div>
-              <div class="first-percentage-line"></div>
+              <div class="first-percentage-line">
+                <div class="first-percentage-line-inner-wrapper">
+                  <img class="arrow" src="./assets/images/fa-chevron-right.svg" alt="">
+                </div>
+              </div>
               <div class="second-percentage-line"></div>
             </div>
+
             <div class="flex-container flex-flow-column percentage-wrapper">
               <span class="percentage-text green-text text-center">Investor details</span>
               <div class="flex-container circle">
-              <span class="bold-text">2</span>
+                <span class="bold-text">2</span>
               </div>
-              <div class="first-percentage-line"></div>
+              <div class="first-percentage-line">
+                <div class="first-percentage-line-inner-wrapper">
+                  <img class="arrow" src="./assets/images/fa-chevron-right.svg" alt="">
+                </div>
+              </div>
               <div class="second-percentage-line"></div>
             </div>
             <div class="flex-container flex-flow-column percentage-wrapper">
@@ -70,7 +78,11 @@
               <div class="flex-container circle">
                 <span class="bold-text">3</span>
               </div>
-              <div class="first-percentage-line"></div>
+              <div class="first-percentage-line">
+                <div class="first-percentage-line-inner-wrapper">
+                  <img class="arrow" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBiYXNlUHJvZmlsZT0idGlueSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiDQoJIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSItMTA1IDEwNyA2LjkgMTAuOCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8cGF0aCBmaWxsPSIjNDZBRDhEIiBkPSJNLTEwMy4yLDExNy43Yy0wLjIsMC4yLTAuNCwwLjItMC42LDBsLTEuMS0xLjFjLTAuMi0wLjItMC4yLTAuNCwwLTAuNmwzLjYtMy42bC0zLjYtMy42DQoJCWMtMC4yLTAuMi0wLjItMC40LDAtMC42bDEuMS0xLjFjMC4yLTAuMiwwLjQtMC4yLDAuNiwwbDUsNWMwLjIsMC4yLDAuMiwwLjQsMCwwLjZMLTEwMy4yLDExNy43eiIvPg0KPC9nPg0KPC9zdmc+DQo=" alt="">
+                </div>
+              </div>
               <div class="second-percentage-line"></div>
             </div>
             <div class="flex-container flex-flow-column percentage-wrapper">
@@ -90,6 +102,7 @@
       <div class="row row-margin-top">
         <article class="col-xs-8">
           <div class="card card-padding">
+          <div id="tab" ng-show="isSet(1)">
             <div class="col-xs-12">
              <div class="flex-container">
                <h2 class="h2-text">Please enter the amount you would like to invest
@@ -198,11 +211,16 @@
               </div>
             </div>
           </article>
+          </div>
+          <div ng-show="isSet(2)">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio nihil veniam dolore quis doloremque, mollitia saepe, expedita optio eius! Officiis et nobis cum aperiam omnis ullam nemo, sapiente deleniti consequuntur.</p>
+          </div>
           <div class="col-xs-12 flex-container
           ">
-          <button class="btn-lg conda-btn">Previous</button>
-          <button class="btn-lg conda-btn">Next</button>
+          <button ng-click="setTab(1)" class="btn-lg conda-btn">Previous</button>
+          <button ng-click="setTab(2)" class="btn-lg conda-btn">Next</button>
         </div>
+       "
 
       </div>
     </article>
