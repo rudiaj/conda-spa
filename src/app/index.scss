@@ -1,0 +1,303 @@
+/**
+ *  If you want to override some bootstrap variables, you have to change values here.
+ *  The list of variables are listed here bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss
+ */
+ $navbar-inverse-link-color: #5AADBB;
+ $icon-font-path: "../../bootstrap-sass/assets/fonts/bootstrap/";
+
+/**
+ *  Do not remove the comments below. It's the markers used by wiredep to inject
+ *  sass dependencies when defined in the bower.json of your dependencies
+ */
+ // bower:scss
+ // endbower
+
+ @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&subset=latin-ext');
+
+
+ /*variables*/
+ $conda-primary-color:   #333c55; //dark-gray
+ $conda-secondary-color: #46ad8d; //greeen
+ $bullets-gray:          #c6c6c6; 
+ $backgound-gray:        #f9f9f9;
+ $secondary-pale-green:  #8ccab7;
+
+ /*end of variables*/
+
+ /*mixins*/
+ @mixin conda-transition($time) {
+ 	transition:all $time ease-in-out;
+ }
+ /*end of mixins*/
+
+ .h1-asset {
+ 	font-family: Lato;
+ 	font-size: 48px;
+ 	font-weight: bold;
+ 	font-style: normal;
+ 	font-stretch: normal;
+ 	letter-spacing: 1px;
+ 	text-align: left;
+ 	color:$conda-primary-color;
+ }
+
+ .h1-text {
+ 	font-family: Lato;
+ 	font-size: 48px;
+ 	font-weight: 300;
+ 	font-style: normal;
+ 	font-stretch: normal;
+ 	letter-spacing: 1px;
+ 	text-align: left;
+ 	color: $conda-primary-color;
+ }
+
+ .h2-text {
+ 	font-family: Lato;
+ 	font-size: 22px;
+ 	font-weight: 300;
+ 	font-style: normal;
+ 	font-stretch: normal;
+ 	line-height: 1.05;
+ 	letter-spacing: 0.4px;
+ 	text-align: left;
+ 	color: $conda-primary-color;
+ }
+
+ .p-text {
+ 	font-family: Lato;
+ 	font-size: 14px;
+ 	font-weight: 300;
+ 	font-style: normal;
+ 	font-stretch: normal;
+ 	line-height: 1.57;
+ 	letter-spacing: 0.3px;
+ 	text-align: left;
+ 	color: $conda-primary-color;
+ 	margin: 0;
+ }
+
+ .conda-btn{
+ 	@include conda-transition(0.3s);
+ 	width: 110px;
+ 	border: solid 2px $conda-secondary-color;
+ 	color: white;
+ 	font-weight:700;
+ 	background-color: $conda-secondary-color;
+ 	&:hover{
+ 		border:solid 2px $conda-secondary-color;
+ 		color: $conda-secondary-color;
+ 		background-color: white;
+ 	}
+ }
+ .bold-text{
+ 	font-weight: 700;
+ }
+
+ body{
+ 	background-color:$backgound-gray;
+ }
+
+ #main{
+ 	color: $conda-primary-color;
+ 	font-family:Lato;
+ 	font-weight: 300;
+ 	nav{
+ 		.navbar{
+ 			background-color: $conda-primary-color;
+ 		}
+ 	}
+ 	.row-margin-top{
+ 		margin-top: 50px;
+ 	}
+ 	.margin-bottom-20{
+ 		margin-bottom: 20px;
+ 	}
+ 	.euro-icon{
+ 		font-size:17px;
+ 		color:$conda-secondary-color;
+ 	}
+
+ 	#main-content-wrapper{
+ 		.card{
+ 			overflow: auto;
+ 			background-color: white;
+ 			box-shadow: -0.7px 0.7px 6.7px 0.4px rgba(146, 146, 146, 0.15);		
+ 		}
+ 		.percentage-wrapper{
+ 			.percentage-text{
+ 				display: inline-block;
+ 				margin-bottom: 34px;
+ 				font-size: 16px;
+ 			}
+ 			.circle{
+ 				height: 38px;
+ 				width: 38px;
+ 				border-radius: 50%;
+ 				background-color: $conda-secondary-color;
+ 				justify-content: center !important;
+ 				span{
+ 					color: white;
+ 					font-size: 24px;
+
+ 				}
+ 			}
+ 		}
+ 		.card-padding{
+ 			padding-top: 50px;
+ 			padding-bottom: 50px;
+ 		}
+ 		section{
+ 			.green-text{
+ 				color: $conda-secondary-color;
+ 			}
+ 			.margin-bottom-55px{
+ 				margin-bottom: 55px;
+ 			}
+ 			.flex-flow-row{
+ 				flex-flow: row wrap;
+ 			}
+ 			.flex-flow-column{
+ 				flex-flow: column wrap;
+ 			}
+ 			.initial-align{
+ 				align-items: initial !important;
+ 			}
+ 			.flex-container{
+ 				display: flex;
+ 				align-items: center;
+ 				justify-content: space-between;
+ 				h2{
+ 					margin:0;
+ 				}
+ 				.vertical-line{
+ 					height: 48px;
+ 					width: 1px;
+ 					background-color:#bfc1c2;
+ 					margin:0 10px;
+
+ 				}
+ 				.invested-amount{
+ 					font-size:46px;
+ 					color: $conda-secondary-color;
+ 				}
+ 			}
+ 			.investment-box{
+ 				margin-bottom: 25px;
+ 				.investment-box-inner-wrapper{
+ 					@include conda-transition(0.3s);
+ 					border: 2px solid rgba(70,173,141,0);
+ 					&:hover{
+ 						border:2px solid rgba(70,173,141,1);
+ 					}
+ 				}	
+ 				.investment-heading{
+ 					padding:10px;
+ 					background-color:$conda-secondary-color;
+ 					.investment-number-container{
+ 						position: relative;
+ 						.investment-number{
+ 							color: white;
+ 							font-weight: 700;
+ 							font-size: 32px;
+ 							line-height: 32px;
+ 						}
+ 						.euro-icon{
+ 							position: absolute;
+ 							color: white;
+ 							font-size: 14px;
+ 							top:0px;
+ 							right:-10px;
+ 						}	
+ 					}
+ 					.round-icon-wrapper{
+ 						display: flex;
+ 						justify-content: center;
+ 						align-items: center;
+ 						border-radius: 50%;
+ 						width: 32px;
+ 						height: 32px;
+ 						background-color: white;
+ 						.status-icon{
+ 							color: $conda-secondary-color;
+ 							display:inline-block;
+ 							font-size: 18px;
+ 							line-height: 18px;
+ 							text-align: center;
+ 							vertical-align: bottom;
+ 						}
+ 					}
+ 					.investment-title{
+ 						font-size:20px;
+ 						color: white;
+ 						flex-grow: 0.7;
+ 					}
+ 				}
+ 				.investment-body{
+ 					background-color: $backgound-gray;
+ 					border: solid 1px #f3f3f3;
+ 					.investment-left-box{
+ 						flex-grow: 0.3;
+ 						padding: 10px;
+ 						.investmet-body-description{
+ 							font-size: 20px;
+ 						}
+ 					}
+ 					.investment-right-box{
+ 						flex-grow:0.7;
+ 						padding: 10px;
+ 					}
+ 				}
+ 			}
+ 			#informations{
+ 				.days-remaining-container{
+ 					padding:16px 10px;
+ 					background-color:$conda-primary-color;
+ 					.days-remaining-inner-wrapper{
+ 						color: white;
+ 						.number-of-days{
+ 							font-size: 20px;
+
+ 						}
+ 						.text-of-days{
+ 							text-transform: uppercase;
+ 							font-size:15px;
+ 						}
+ 					}
+ 				}
+ 				.investment-details{
+ 					color: $conda-secondary-color;
+ 					font-size: 18px;
+ 					margin-bottom: 32px;
+ 					span{
+ 						display: inline-block;
+ 					}
+ 				}
+ 				.service-fee-container{
+ 					margin:40px 0;
+ 				}
+ 				.investment-meta-wrapper{
+ 					margin-bottom: 40px;
+ 					i{
+ 						color: $conda-primary-color;
+ 						font-size: 14px;
+ 						margin-right:10px;
+ 					}
+ 					span{
+ 						font-size: 17px;
+ 						.uppercase-text{
+ 							text-transform: uppercase;
+ 						}
+ 					}
+ 				}
+ 			}
+ 		}
+ 	}
+ }
+
+/**
+ *  Do not remove the comments below. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
+ // injector
+ // endinjector
