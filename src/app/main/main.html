@@ -1,4 +1,3 @@
-{{asset.language}}
 <div id=main>
   <nav class="navbar navbar-default navbar-static-top">
     <div class="container">
@@ -43,7 +42,7 @@
       <div class="container">
         <div class="row">
           <div class="col-xs-12">
-            <h1 class="h1-text">Investment for the project <span class="green-text h1-asset">Zooblitz.</span>
+            <h1 class="h1-text">Investment for the project <span class="green-text h1-asset">{{asset.asset_title }}</span>
             </h1>
           </div>
           <div class="col-xs-12 display-flex">
@@ -118,11 +117,11 @@
               <div class="flex-container flex-flow-column initial-align">
                 <div>
                   <span class="bold-text">Minimum amount:</span>
-                  <span>EUR 1.00 </span>
+                  <span>EUR {{asset.investment_min}}</span>
                 </div>
                 <div>
                   <span class="bold-text">Maximum amount:</span>
-                  <span>EUR 1.00 </span>
+                  <span>EUR {{asset.investment_max}} </span>
                 </div>
               </div>
             </div>
@@ -226,7 +225,7 @@
     </article>
     <article id="informations" class="col-xs-4 column-padding">
       <div class="card">
-        <img class="img-responsive" src="./assets/images/projectpicture@2x.jpg" alt="">
+        <img class="img-responsive" src="{{asset.thumb_image}}" alt="">
         <div class="days-remaining-container flex-container">
           <div class="days-remaining-inner-wrapper">
             <span class="number-of-days bold-text">18</span>
@@ -234,10 +233,10 @@
           </div>
         </div>
         <div class="col-xs-12">
-          <h2 class="h2-text bold-text">Zooblitz</h2>
+          <h2 class="h2-text bold-text">{{asset.asset_title}}</h2>
           <hr>
           <div class="investment-details bold-text">Investment details</div>
-
+            {{asset.investment_summary}}
           <div>
             <span class="bold-text"> Base interest: </span><span>4.5% p.a.</span>
           </div>
