@@ -10,17 +10,20 @@
     // var vm = this;;
     // vm.nesto ="fjkfjtg";
 
-    $scope.assets =[];
 
-    Restangular.setBaseUrl('https://dev-api.conda.online/assets/v1/de/');
+    // $scope.asset={};
 
-    $scope.baseAccounts = Restangular.one('assets');
-    $scope.baseAccounts.getList().then(function(assets) {
-	  $scope.assets = assets;
-	});
+    Restangular.setBaseUrl('https://dev-api.conda.online/assets/');
+
+    Restangular.one('v1/de/','3790da38-6ff9-4749-b7a4-c42625bbcef3')
+    .get()
+    .then(function(result){
+        $scope.asset = result;
+        console.dir(result.asset_data);
+    });
 
 
-    console.log($scope.assets[0])
+   
     // tabs logic
     $scope.tab = 1;
 
